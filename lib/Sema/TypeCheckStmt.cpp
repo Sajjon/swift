@@ -2689,7 +2689,7 @@ static void addImplicitReturnIfNeeded(BraceStmt *body, DeclContext *dc) {
   if (body->empty())
     return;
 
-  // Must have a single active element (which is guarenteed to be the last
+  // Must have a single active element (which is guaranteed to be the last
   // element), or we must be allowing implicit last expression results.
   auto &ctx = dc->getASTContext();
   if (!body->getSingleActiveElement() &&

@@ -91,7 +91,7 @@ void PostfixCompletionCallback::fallbackTypeCheck(DeclContext *DC) {
 
   SyntacticElementTarget completionTarget(fallbackExpr, fallbackDC, CTP_Unused,
                                           Type(),
-                                          /*isDiscared=*/true);
+                                          /*isDiscarded=*/true);
 
   typeCheckForCodeCompletion(completionTarget, /*needsPrecheck*/ true,
                              [&](const Solution &S) { sawSolution(S); });
@@ -267,7 +267,7 @@ struct OperatorResultTypes {
   }
 };
 
-/// Builds a constriant system that tries applying the operator \p op on a LHS
+/// Builds a constraint system that tries applying the operator \p op on a LHS
 /// of type \p LHSType. If that succeeds, returns the result type of the
 /// operator call and (in case of binary operators) the expected type for the
 /// RHS.

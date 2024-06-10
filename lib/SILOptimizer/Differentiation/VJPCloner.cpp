@@ -1252,7 +1252,7 @@ SILFunction *VJPCloner::Implementation::createEmptyPullback() {
   }
 
   if (pullbackInfo.hasHeapAllocatedContext()) {
-    // Accept a `AutoDiffLinarMapContext` heap object if there are loops.
+    // Accept a `AutoDiffLinearMapContext` heap object if there are loops.
     pbParams.push_back({
       getASTContext().TheNativeObjectType,
       ParameterConvention::Direct_Guaranteed

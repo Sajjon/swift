@@ -245,7 +245,7 @@ bool swiftscan_cas_prune_ondisk_data(swiftscan_cas_t cas,
   return false;
 }
 
-/// Expand the invocation if there is repsonseFile into Args that are passed in
+/// Expand the invocation if there is responseFile into Args that are passed in
 /// the parameter. Return swift-frontend arguments in an ArrayRef, which has the
 /// first "-frontend" option dropped if needed.
 static llvm::ArrayRef<const char *>

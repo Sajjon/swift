@@ -670,7 +670,7 @@ void SignatureExpansion::expandCoroutineResult(bool forContinuation) {
     case SILCoroutineKind::None:
       llvm_unreachable("should have been filtered out before here");
 
-    // Yield-once coroutines may optionaly return a value from the continuation.
+    // Yield-once coroutines may optionally return a value from the continuation.
     case SILCoroutineKind::YieldOnce: {
       auto fnConv = getSILFuncConventions();
 

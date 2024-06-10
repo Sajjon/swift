@@ -1175,7 +1175,7 @@ struct PartitionOpBuilder {
         lookupValueID(fst), lookupValueID(snd), currentInst));
   }
 
-  /// Mark \p value artifically as being part of an actor isolated region by
+  /// Mark \p value artificially as being part of an actor isolated region by
   /// introducing a new fake actor introducing representative and merging them.
   void addActorIntroducingInst(SILValue value,
                                SILIsolationInfo actorIsolation) {
@@ -1271,7 +1271,7 @@ enum class TranslationSemantics {
   ///    their behavior depending on some state on the instruction itself.
   Special,
 
-  /// An instruction that is a full apply site. Can cause transfering or
+  /// An instruction that is a full apply site. Can cause transferring or
   /// untransferring of regions.
   Apply,
 
@@ -2566,7 +2566,7 @@ CONSTANT_TRANSLATION(InitExistentialValueInst, LookThrough)
 //
 
 // These are treated as stores - meaning that they could write values into
-// memory. The beahvior of this depends on whether the tgt addr is aliased,
+// memory. The behavior of this depends on whether the tgt addr is aliased,
 // but conservative behavior is to treat these as merges of the regions of
 // the src value and tgt addr
 CONSTANT_TRANSLATION(CopyAddrInst, Store)
@@ -3133,7 +3133,7 @@ bool BlockPartitionState::recomputeExitFromEntry(
                         transferringOpToStateMap);
   for (const auto &partitionOp : blockPartitionOps) {
     // By calling apply without providing any error handling callbacks, errors
-    // will be surpressed.  will be suppressed
+    // will be suppressed.  will be suppressed
     eval.apply(partitionOp);
   }
   LLVM_DEBUG(llvm::dbgs() << "    Working Partition: ";

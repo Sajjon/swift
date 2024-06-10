@@ -447,7 +447,7 @@ public:
   void verifyAllBuffers() const;
 
   /// Translate line and column pair to the offset.
-  /// If the column number is the maximum unsinged int, return the offset of the end of the line.
+  /// If the column number is the maximum unsigned int, return the offset of the end of the line.
   std::optional<unsigned> resolveFromLineCol(unsigned BufferId, unsigned Line,
                                              unsigned Col) const;
 

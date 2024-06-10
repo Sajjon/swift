@@ -1816,7 +1816,7 @@ namespace {
         // Stores the address of the storage property.
         ManagedValue proj;
 
-        // TODO: revist minimal
+        // TODO: revisit minimal
         SILType varStorageType = SGF.SGM.Types.getSubstitutedStorageType(
             TypeExpansionContext::minimal(), backingVar,
             ValType->getCanonicalType());

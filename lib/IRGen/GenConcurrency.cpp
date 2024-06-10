@@ -472,7 +472,7 @@ static llvm::Value *addOptionRecord(IRGenFunction &IGF,
 }
 
 /// Add a task option record to the options list if the given value
-/// is presernt.
+/// is present.
 template <class RecordTraits>
 static llvm::Value *maybeAddOptionRecord(IRGenFunction &IGF,
                                          llvm::Value *curRecordPointer,

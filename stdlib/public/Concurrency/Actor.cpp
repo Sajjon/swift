@@ -1805,7 +1805,7 @@ bool DefaultActorImpl::unlock(bool forceUnlock)
     } else {
       // There is no work left to do - actor goes idle
 
-      // R becomes 0 and N descreases by 1.
+      // R becomes 0 and N decreases by 1.
       // But, we may still have stealers scheduled so N could be > 0. This is
       // fine since N >= R. Every such stealer, once scheduled, will observe
       // actor as idle, will release its ref and return. (See tryLock function.)

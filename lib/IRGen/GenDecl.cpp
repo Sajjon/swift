@@ -587,7 +587,7 @@ emitGlobalList(IRGenModule &IGM, ArrayRef<llvm::WeakTrackingVH> handles,
 
       if (IGM.IRGen.Opts.ConditionalRuntimeRecords) {
         // Allow dead-stripping `var` (the runtime record from the global list)
-        // when `handle` / `elt` (the underlaying entity) is not referenced.
+        // when `handle` / `elt` (the underlying entity) is not referenced.
         IGM.appendLLVMUsedConditionalEntry(var, elt->stripPointerCasts());
       }
     }

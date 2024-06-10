@@ -210,7 +210,7 @@ OpenedArchetypeInfo::OpenedArchetypeInfo(Operand &use) {
     //   <opened_use> %instance
     if (auto *initI = getStackInitInst(instance, user, isOpenedValueCopied)) {
       // init_existential_addr isn't handled here because it isn't considered an
-      // "opened" archtype. init_existential_addr should be handled by
+      // "opened" archetype. init_existential_addr should be handled by
       // ConcreteExistentialInfo.
 
       if (auto *CAI = dyn_cast<CopyAddrInst>(initI))

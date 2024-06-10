@@ -650,7 +650,7 @@ func testImplicitMemberInArrayLiteral() {
 struct Wrap<T> {
   func method<U>(_ fn: (T) -> U) -> Wrap<U> {}
 }
-func testGenricMethodOnGenericOfArchetype<Wrapped>(value: Wrap<Wrapped>) {
+func testGenericMethodOnGenericOfArchetype<Wrapped>(value: Wrap<Wrapped>) {
   value.method(#^ARCHETYPE_GENERIC_1^#)
 // ARCHETYPE_GENERIC_1: Decl[InstanceMethod]/CurrNominal/Flair[ArgLabels]:   ['(']{#(fn): (Wrapped) -> U##(Wrapped) -> U#}[')'][#Wrap<U>#];
 }
@@ -780,7 +780,7 @@ func testAfterVariadic() {
   }
 }
 
-func testClosurePlaceholderContainsInternalParameterNamesIfPresentInSiganture() {
+func testClosurePlaceholderContainsInternalParameterNamesIfPresentInSignature() {
   func sort(callback: (_ left: Int, _ right: Int) -> Bool) {}
   sort(#^CLOSURE_PARAM_WITH_INTERNAL_NAME^#)
 // CLOSURE_PARAM_WITH_INTERNAL_NAME: Begin completions, 1 item

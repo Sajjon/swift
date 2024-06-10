@@ -94,7 +94,7 @@ private:
   /// whether this changed the exit partition.
   ///
   /// NOTE: This method ignored errors that arise. We process separately later
-  /// to discover if an error occured.
+  /// to discover if an error occurred.
   bool recomputeExitFromEntry(PartitionOpTranslator &translator);
 };
 

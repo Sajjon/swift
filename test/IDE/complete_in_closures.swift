@@ -1,6 +1,6 @@
 // RUN: %batch-code-completion
 
-// EMTPY: Token
+// EMPTY: Token
 // EMPTY-NOT: Begin completions
 
 //===--- Helper types that are used in this test

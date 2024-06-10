@@ -2550,7 +2550,7 @@ void IRGenModule::emitSILWitnessTable(SILWitnessTable *wt) {
 #ifndef NDEBUG
                         wt->dump();
 #endif
-                        llvm::report_fatal_error("use of relative protcol witness tables not supported");
+                        llvm::report_fatal_error("use of relative protocol witness tables not supported");
                       }});
   }
   if (!isResilient) {

@@ -2088,7 +2088,7 @@ bool swift::findUnreferenceableStorage(StructDecl *decl, SILType structType,
   if (decl->hasUnreferenceableStorage()) {
     return true;
   }
-  // Check if any fields have unreferenceable stoage
+  // Check if any fields have unreferenceable storage
   for (auto *field : decl->getStoredProperties()) {
     TypeExpansionContext tec = *func;
     auto fieldTy = structType.getFieldType(field, func->getModule(), tec);

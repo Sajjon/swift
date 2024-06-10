@@ -278,7 +278,7 @@ enum BorrowingInstruction : CustomStringConvertible, Hashable {
 ///
 /// If the value is a begin_apply result, then it may be the token or
 /// one of the yielded values. In any case, the scope ending operands
-/// are on the end_apply or abort_apply intructions that use the
+/// are on the end_apply or abort_apply instructions that use the
 /// token.
 ///
 /// Note: equivalent to C++ BorrowedValue, but also handles begin_apply.

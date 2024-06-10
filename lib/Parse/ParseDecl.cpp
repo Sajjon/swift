@@ -2539,7 +2539,7 @@ Parser::parseMacroRoleAttribute(
     return makeParserError();
   }
 
-  // Parse the argments.
+  // Parse the arguments.
   SourceLoc lParenLoc = consumeAttributeLParen();
   SourceLoc rParenLoc;
   std::optional<MacroRole> role;
@@ -2570,7 +2570,7 @@ Parser::parseMacroRoleAttribute(
       }
     }
 
-    // Parse the argment label, if there is one.
+    // Parse the argument label, if there is one.
     Identifier fieldName;
     SourceLoc fieldNameLoc;
     parseOptionalArgumentLabel(fieldName, fieldNameLoc);

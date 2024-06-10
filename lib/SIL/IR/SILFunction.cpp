@@ -203,7 +203,7 @@ static BridgedFunction::WriteFn writeFunction = nullptr;
 static BridgedFunction::ParseFn parseFunction = nullptr;
 static BridgedFunction::CopyEffectsFn copyEffectsFunction = nullptr;
 static BridgedFunction::GetEffectInfoFn getEffectInfoFunction = nullptr;
-static BridgedFunction::GetMemBehaviorFn getMemBehvaiorFunction = nullptr;
+static BridgedFunction::GetMemBehaviorFn getMemBehaviorFunction = nullptr;
 static BridgedFunction::ArgumentMayReadFn argumentMayReadFunction = nullptr;
 
 SILFunction::SILFunction(
@@ -942,7 +942,7 @@ bool SILFunction::canBeInlinedIntoCaller(SerializedKind_t callerSerializedKind) 
     // If Package-CMO is enabled, we serialize package, public,
     // and @usableFromInline decls as [serialized_for_package].
     // Their bodies must not, however, leak into @inlinable
-    // functons (that are [serialized]) since they are inlined
+    // functions (that are [serialized]) since they are inlined
     // outside of their defining module.
     //
     // If this callee is [serialized_for_package], the caller
@@ -1175,7 +1175,7 @@ void BridgedFunction::registerBridging(SwiftMetatype metatype,
   parseFunction = parseFn;
   copyEffectsFunction = copyEffectsFn;
   getEffectInfoFunction = effectInfoFn;
-  getMemBehvaiorFunction = memBehaviorFn;
+  getMemBehaviorFunction = memBehaviorFn;
   argumentMayReadFunction = argumentMayReadFn;
 }
 
@@ -1263,10 +1263,10 @@ visitArgEffects(std::function<void(int, int, bool)> c) const {
 }
 
 MemoryBehavior SILFunction::getMemoryBehavior(bool observeRetains) {
-  if (!getMemBehvaiorFunction)
+  if (!getMemBehaviorFunction)
     return MemoryBehavior::MayHaveSideEffects;
 
-  auto b = getMemBehvaiorFunction({this}, observeRetains);
+  auto b = getMemBehaviorFunction({this}, observeRetains);
   return (MemoryBehavior)b;
 }
 

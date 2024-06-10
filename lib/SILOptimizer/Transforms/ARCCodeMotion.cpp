@@ -1256,7 +1256,7 @@ public:
     }
 
     if (EdgeChanged) {
-      // We splitted critical edges.
+      // We split critical edges.
       invalidateAnalysis(SILAnalysis::InvalidationKind::FunctionBody);
       return;
     }

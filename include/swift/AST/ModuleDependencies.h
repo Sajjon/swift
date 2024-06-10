@@ -622,7 +622,7 @@ public:
     return storage->optionalModuleImports;
   }
 
-  /// Retreive the module-level dependencies.
+  /// Retrieve the module-level dependencies.
   const ArrayRef<ModuleDependencyID> getDirectModuleDependencies() const {
     assert(storage->resolved);
     return storage->resolvedDirectModuleDependencies;

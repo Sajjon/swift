@@ -200,7 +200,7 @@ static bool isPackageCMOEnabled(ModuleDecl *mod) {
 /// is otherwise illegal. It's also used to determine during SIL deserialization whether
 /// loadable types in a serialized function can be allowed in the client module that
 /// imports the module built with Package CMO. If the client contains a [serialized]
-/// function due to `@inlinable`, funtions with [serialized_for_package] from
+/// function due to `@inlinable`, functions with [serialized_for_package] from
 /// the imported module are not allowed being inlined into the client function, which
 /// is the correct behavior.
 static bool isSerializedWithRightKind(const SILModule &mod,
@@ -270,7 +270,7 @@ void CrossModuleOptimization::trySerializeFunctions(
 }
 
 void CrossModuleOptimization::serializeFunctionsInModule(SILPassManager *manager) {
-  // Reorder SIL funtions in the module bottom up so we can serialize
+  // Reorder SIL functions in the module bottom up so we can serialize
   // the most nested referenced functions first and avoid unnecessary
   // recursive checks.
   BasicCalleeAnalysis *BCA = manager->getAnalysis<BasicCalleeAnalysis>();

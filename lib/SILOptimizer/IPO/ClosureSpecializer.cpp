@@ -1138,7 +1138,7 @@ static void markReabstractionPartialApplyAsUsed(
     return markReabstractionPartialApplyAsUsed(FirstClosure, MD->getValue(),
                                                UsedReabstractionClosure);
   }
-  llvm_unreachable("Unexpect instruction");
+  llvm_unreachable("Unexpected instruction");
 }
 
 /// Returns true if the \p closureArgIdx argument of \p callee is called in

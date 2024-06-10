@@ -58,7 +58,7 @@ extension MacroRole {
   }
 }
 
-/// Resolve a reference to type metadata into a macro, if posible.
+/// Resolve a reference to type metadata into a macro, if possible.
 ///
 /// Returns an unmanaged pointer to an ExportedMacro instance that describes
 /// the specified macro. If there is no macro with the given name, produces
@@ -588,7 +588,7 @@ func expandFreestandingMacroIPC(
       expandedSource = _expandedSource
       diagnostics = _diagnostics
     default:
-      throw PluginError.invalidReponseKind
+      throw PluginError.invalidResponseKind
     }
 
     // Process the result.
@@ -952,7 +952,7 @@ func expandAttachedMacroIPC(
       diagnostics = _diagnostics
       break
     default:
-      throw PluginError.invalidReponseKind
+      throw PluginError.invalidResponseKind
     }
 
     // Process the result.

@@ -1,7 +1,7 @@
 // RUN: %batch-code-completion -disable-objc-attr-requires-foundation-module
 
 // SE-0353
-struct ConstraintedExistentialTest {
+struct ConstrainedExistentialTest {
   protocol Producer<Event> {
     associatedtype Event
   }

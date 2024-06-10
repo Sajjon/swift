@@ -373,7 +373,7 @@ ERROR(bad_attr_on_non_const_global,none,
 ERROR(global_must_be_compile_time_const,none,
       "global variable must be a compile-time constant", ())
 ERROR(non_final_generic_class_function,none,
-      "classes cannot have non-final generic fuctions in embedded Swift", ())
+      "classes cannot have non-final generic functions in embedded Swift", ())
 ERROR(embedded_swift_existential_type,none,
       "cannot use a value of protocol type %0 in embedded Swift", (Type))
 ERROR(embedded_swift_existential,none,

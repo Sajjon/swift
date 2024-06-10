@@ -961,7 +961,7 @@ void TempRValueOptPass::run() {
     invalidateAnalysis(SILAnalysis::InvalidationKind::Instructions);
   }
 
-  // Call the utlity to complete ossa lifetime.
+  // Call the utility to complete ossa lifetime.
   OSSALifetimeCompletion completion(function, da->get(function));
   for (auto it : valuesToComplete) {
     completion.completeOSSALifetime(it,

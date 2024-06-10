@@ -1,4 +1,4 @@
-//===--- ExprContextAnalysis.cpp - Expession context analysis -------------===//
+//===--- ExprContextAnalysis.cpp - Expression context analysis -------------===//
 //
 // This source file is part of the Swift.org open source project
 //
@@ -88,7 +88,7 @@ class ExprFinder : public ASTWalker {
   SourceRange TargetRange;
   Expr *FoundExpr = nullptr;
 
-  template <typename NodeType> bool isInterstingRange(NodeType *Node) {
+  template <typename NodeType> bool isInterestingRange(NodeType *Node) {
     return SM.rangeContains(Node->getSourceRange(), TargetRange);
   }
 
@@ -129,15 +129,15 @@ public:
       FoundExpr = E;
       return Action::Stop();
     }
-    return Action::VisitNodeIf(isInterstingRange(E), E);
+    return Action::VisitNodeIf(isInterestingRange(E), E);
   }
 
   PreWalkResult<Pattern *> walkToPatternPre(Pattern *P) override {
-    return Action::VisitNodeIf(isInterstingRange(P), P);
+    return Action::VisitNodeIf(isInterestingRange(P), P);
   }
 
   PreWalkResult<Stmt *> walkToStmtPre(Stmt *S) override {
-    return Action::VisitNodeIf(isInterstingRange(S), S);
+    return Action::VisitNodeIf(isInterestingRange(S), S);
   }
 
   PreWalkAction walkToTypeReprPre(TypeRepr *T) override {

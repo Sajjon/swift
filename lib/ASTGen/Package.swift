@@ -25,7 +25,7 @@ let swiftSourceDirectory = #filePath
   .dropLast(3) // Remove 'lib', 'ASTGen', 'Package.swift'
   .joined(separator: "/")
 
-let swiftSetttings: [SwiftSetting] = [
+let swiftSettings: [SwiftSetting] = [
   .interoperabilityMode(.Cxx),
   .unsafeFlags([
     "-Xcc", "-DCOMPILED_WITH_SWIFT",
@@ -70,7 +70,7 @@ let package = Package(
         "_CompilerRegexParser",
       ],
       path: "Sources/ASTGen",
-      swiftSettings: swiftSetttings
+      swiftSettings: swiftSettings
     ),
     .target(
       name: "swiftIDEUtilsBridging",
@@ -80,13 +80,13 @@ let package = Package(
         .product(name: "SwiftSyntax", package: "swift-syntax"),
       ],
       path: "Sources/SwiftIDEUtilsBridging",
-      swiftSettings: swiftSetttings
+      swiftSettings: swiftSettings
     ),
     .target(
       name: "_CompilerRegexParser",
       dependencies: [],
       path: "_RegexParser_Sources",
-      swiftSettings: swiftSetttings
+      swiftSettings: swiftSettings
     ),
   ],
   cxxLanguageStandard: .cxx17

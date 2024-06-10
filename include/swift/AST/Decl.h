@@ -1315,7 +1315,7 @@ public:
   std::optional<std::pair<const AvailableAttr *, const Decl *>>
   getSemanticUnavailableAttr(bool ignoreAppExtensions = false) const;
 
-  /// Returns true if code associated with this declaration should be considerd
+  /// Returns true if code associated with this declaration should be considered
   /// unreachable at runtime because the declaration is unavailable in all
   /// execution contexts in which the code may run.
   bool isUnreachableAtRuntime() const;
@@ -5597,7 +5597,7 @@ enum class StorageMutability {
   /// inout.
   Mutable,
 
-  /// The storage is immutable, but can be asigned for the purposes of
+  /// The storage is immutable, but can be assigned for the purposes of
   /// initialization.
   Initializable
 };

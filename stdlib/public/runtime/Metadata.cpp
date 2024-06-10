@@ -6270,7 +6270,7 @@ using RelativeBaseWitness = RelativeDirectPointer<void, true /*nullable*/>;
 //
 // The layout of a dynamically allocated relative witness table is:
 //             [ conditional conformance n] ... private area
-//             [ conditional conformance 0]     (negatively adressed)
+//             [ conditional conformance 0]     (negatively addressed)
 // pointer ->  [ pointer to relative witness table (pattern) ]
 //             [ base protocol witness table pointer 0 ] ... base protocol
 //             [ base protocol witness table pointer n ]     pointers

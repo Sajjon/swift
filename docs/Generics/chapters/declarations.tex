@@ -571,7 +571,7 @@ In a method body, an unqualified reference to a member of the innermost nominal 
 
 An unqualified reference to a member of an outer nominal type can only be made if the member is static, because there is no ``outer \texttt{self} value'' to invoke the method with; the nested type does not reference a value of its parent type at run time.
 
-For the same reason, methods inside \index{local type declaration}local types cannot refer to local variables declared inside parent declaration contexts. (Constrast this with \index{Java}Java inner classes for example, which can be declared as \texttt{static} or instance members of their parent class; a non-\texttt{static} inner class can then capture values from outer scopes, including ``\texttt{this}'', which plays the same role as Swift's ``\texttt{self}''.)
+For the same reason, methods inside \index{local type declaration}local types cannot refer to local variables declared inside parent declaration contexts. (Contrast this with \index{Java}Java inner classes for example, which can be declared as \texttt{static} or instance members of their parent class; a non-\texttt{static} inner class can then capture values from outer scopes, including ``\texttt{this}'', which plays the same role as Swift's ``\texttt{self}''.)
 
 \paragraph{Constructor declarations.}
 \IndexDefinition{constructor declaration}Constructor declarations are introduced with the \texttt{init} keyword. The parent context of a constructor must be a nominal type or extension.
@@ -1030,7 +1030,7 @@ Operations on type contexts:
 \item \texttt{getSelfInterfaceType()} is similar.
 \end{itemize}
 
-Generic prameters and requirements:
+Generic parameters and requirements:
 \begin{itemize}
 \item \texttt{isGenericContext()} answers true if either this generic context or one of its parents has a generic parameter list.
 \item \texttt{isInnermostContextGeneric()} answers if this declaration context itself has a generic parameter list. Compare with \texttt{isGenericContext()}.

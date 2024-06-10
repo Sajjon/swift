@@ -2001,7 +2001,7 @@ static void diagnoseImplicitSelfUseInClosure(const Expr *E,
       return nullptr;
     }
 
-    /// Determines whether or not this is a simple self capture by retreiving
+    /// Determines whether or not this is a simple self capture by retrieving
     /// the `CaptureListEntry` that contains the `selfDecl`.
     ///  - Unlike `selfDecl->isSelfParamCapture()`, this will return true
     ///    for a simple `[weak self]` capture.
@@ -2476,7 +2476,7 @@ static void diagnoseImplicitSelfUseInClosure(const Expr *E,
     /// that was previously permitted in older versions like Swift 5.3.
     bool isPreviouslyPermittedStrongSelfUsage(VarDecl *selfDecl,
                                               AbstractClosureExpr *ACE) {
-      // Implicit self was accidentially allowed in examples like this
+      // Implicit self was accidentally allowed in examples like this
       // in Swift 5.3-5.5, so check for this case and emit a warning
       // instead of an error:
       //
@@ -6259,8 +6259,8 @@ diagnoseDictionaryLiteralDuplicateKeyEntries(const Expr *E,
       // maybe be evaluated to different values. e.g.
       // "\(a) \(a)" where 'a' is a computed variable.
       case ExprKind::InterpolatedStringLiteral:
-      // Also skip object literals as most of them takes paramenters that can
-      // contain expressions that altough equal may evaluate to different
+      // Also skip object literals as most of them takes parameters that can
+      // contain expressions that although equal may evaluate to different
       // values e.g. #fileLiteral(resourceName: a) where 'a' is a computed
       // property is valid.
       case ExprKind::ObjectLiteral:

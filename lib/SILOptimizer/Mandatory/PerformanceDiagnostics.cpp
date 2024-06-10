@@ -631,7 +631,7 @@ bool PerformanceDiagnostics::visitInst(SILInstruction *inst,
 
     switch (inst->getKind()) {
     case SILInstructionKind::BeginApplyInst:
-      // Not all begin_applys necessarily allocate. But it's difficult to
+      // Not all begin_applies necessarily allocate. But it's difficult to
       // estimate the effect on SIL level.
       diagnose(loc, diag::performance_allocating, "co-routine calls");
       break;

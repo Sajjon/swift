@@ -41,7 +41,7 @@ $ swiftc -target <target triple> -enable-experimental-feature Embedded -wmo \
 
 ### Building Swift firmware for an embedded target
 
-To build Swift firmware (for now ingnoring integration with SDKs, libraries and other pre-existing C code), we can use the `-target` argument to specify the CPU architecture. The target triple also decides whether the output object file will be an ELF file, or a Mach-O. For example:
+To build Swift firmware (for now ignoring integration with SDKs, libraries and other pre-existing C code), we can use the `-target` argument to specify the CPU architecture. The target triple also decides whether the output object file will be an ELF file, or a Mach-O. For example:
 
 ```bash
 # To build an ARMv7 Mach-O object file:
@@ -194,11 +194,11 @@ For (2), external dependencies are also triggered by specific code needing them,
   - dependency: `void *__stack_chk_guard;`
   - dependency: `void __stack_chk_fail(void);`
   - stack protectors can be disabled with `-disable-stack-protector` swiftc flag
-- **atomics instrinsics**
+- **atomics intrinsics**
   - on CPU architectures that don't have direct load-acquire/store-release support in the ISA, LLVM calls helper functions for atomic operations
   - needed by refcounting in the Embedded Swift runtime (so any class usage will trigger this dependency)
   - also needed when using atomics from the Synchronization module
-- **multiplication/division/modulo instrinsics**
+- **multiplication/division/modulo intrinsics**
   - on CPU architectures that don't have direct support for the math operations in the ISA
   - dependency (on Mach-O): `__divti3`
   - dependency (on Mach-O): `__modti3`

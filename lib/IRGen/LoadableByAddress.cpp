@@ -2628,7 +2628,7 @@ void LoadableByAddress::recreateSingleApply(
     // Change the type of the Closure
     auto partialApplyConvention = castedApply->getCalleeConvention();
     auto resultIsolation = castedApply->getResultIsolation();
-    // We do need to update the closure's funtion type to match with the other
+    // We do need to update the closure's function type to match with the other
     // uses inside of the binary. Pointer auth cares about the SIL function
     // type.
     if (callee->getType().castTo<SILFunctionType>()->getExtInfo().getRepresentation() ==
@@ -4332,7 +4332,7 @@ static void runPeepholesAndReg2Mem(SILPassManager *pm, SILModule *silMod,
     // Assign addresses to basic block arguments.
 
     // Store alloc_stack's we created that need to be initialized after we
-    // proccess the original instructions in the function.
+    // process the original instructions in the function.
     SmallVector<std::pair<AllocStackInst *, SILValue>, 8> largeArguments;
     SmallVector<std::pair<AllocStackInst *, SILArgument *>, 8>
         largeTryApplyResults;
@@ -4395,7 +4395,7 @@ static void runPeepholesAndReg2Mem(SILPassManager *pm, SILModule *silMod,
       }
     }
 
-    // Asign addresses to non-address SSA values.
+    // Assign addresses to non-address SSA values.
     PostOrderFunctionInfo postorderInfo(&currF);
     for (auto *BB : postorderInfo.getReversePostOrder()) {
       SmallVector<SILInstruction *, 32> origInsts;

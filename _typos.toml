@@ -1,0 +1,149 @@
+[files]
+extend-exclude = [
+    "CHANGELOG.md",
+    "benchmark/single-source/CountAlgo.swift",
+    "benchmark/single-source/SortStrings.swift",
+    "docs/SIL.rst",
+    "docs/ABI/Mangling.rst",
+    "include/swift/AST/Builtins.def",
+    "include/swift/RemoteInspection/RuntimeHeaders/*",
+    "include/swift/SIL/OptimizationRemark.h",
+    "lib/AST/AccessRequests.cpp",
+    "lib/IRGen/GenKeyPath.cpp",
+    "validation-test/compiler_crashers_fixed",
+    "test/SILOptimizer/access_marker_verify",
+    "validation-test/compiler_crashers_2_fixed",
+    "validation-test/IDE/crashers_2_fixed",
+    "validation-test/stdlib/ArrayTrapsObjC.swift",
+    "validation-test/stdlib/StringNormalization.swift",
+    "benchmark/single-source/FindStringNaive.swift",
+    "utils/gen-unicode-data/Data/*",
+    "stdlib/private/StdlibUnicodeUnittest/UnicodeScalarProperties.swift",
+    "stdlib/public/core/CString.swift",
+    "stdlib/public/core/String.swift",
+    "stdlib/public/Windows/WinSDK.swift",
+    "stdlib/public/runtime/SwiftDtoa.cpp",
+    "stdlib/public/Backtracing/modules/ImageFormats/Elf/elf.h",
+    "lib/SILOptimizer/Utils/SILIsolationInfo.cpp",
+    "test/abi/*",
+    "test/Demangle/*",
+    "test/Concurrency/default_actor_definit.swift",
+    "test/Concurrency/flow_isolation.swift",
+]
+
+[default]
+check-filename = false
+
+[default.extend-identifiers]
+Elf32_Rela = "Elf32_Rela"
+ALS = "ALS"
+ALS_SWIFT_EXEC = "ALS_SWIFT_EXEC"
+ALS_DEPENDS = "ALS_DEPENDS"
+ALS_BOOTSTRAPPING = "ALS_BOOTSTRAPPING"
+ExtensionImportVisiblity = "ExtensionImportVisiblity"
+Elf64_Rela = "Elf64_Rela"
+SHT_RELA = "SHT_RELA"
+selfs = "selfs"
+SWIFT_RUNTIME_MUTEX_PHTREAD_BACKDEPLOY56_H = "SWIFT_RUNTIME_MUTEX_PHTREAD_BACKDEPLOY56_H"
+EM_COREA_2ND = "EM_COREA_2ND"
+_O_WRONLY = "_O_WRONLY"
+O_WRONLY = "O_WRONLY"
+s43_bridgeNonVerbatimFromObjectiveCConditionalySbyXl_xmxSgztlF = "s43_bridgeNonVerbatimFromObjectiveCConditionalySbyXl_xmxSgztlF"
+DW_TAG_formal_parmeter = "DW_TAG_formal_parmeter"
+DW_AT_endianity = "DW_AT_endianity"
+inout = "inout"
+isRela = "isRela"
+inout_aliasable = "inout_aliasable"
+inouts = "inouts"
+numer = "numer"
+doas = "doas"
+netinet_in_systm = "netinet_in_systm"
+fcmp_olt_FPIEEE = "fcmp_olt_FPIEEE"
+fcmp_olt_ = "fcmp_olt_"
+fcmp_olt = "fcmp_olt"
+000000000002afe0 = "000000000002afe0"
+multline = "multline"
+hasMangledNam = "hasMangledNam"
+hightlightLength = "hightlightLength"
+Sur = "Sur"
+ND = "ND"
+alledge_iterator = "alledge_iterator"
+Nd = "Nd"
+Nd1 = "Nd1"
+Nd2 = "Nd2"
+bitap = "bitap"
+NdKind = "NdKind"
+KindNd = "KindNd"
+SpecNd = "SpecNd"
+TextNd = "TextNd"
+FLE = "FLE"
+TRE = "TRE"
+HTE = "HTE"
+hsi = "hsi"
+autoClos = "autoClos"
+clos = "clos"
+Ser = "Ser"
+ser = "ser"
+IsSer = "IsSer"
+SILSer = "SILSer"
+FCMP_OLT = "FCMP_OLT"
+error_swift_module_file_requires_delimeter = "error_swift_module_file_requires_delimeter"
+explosion_size_oveflow = "explosion_size_oveflow"
+desig_init_added = "desig_init_added"
+warn_ignore_option_overriden_by = "warn_ignore_option_overriden_by"
+cannot_default_generic_parameter_inferrable_from_another_parameter = "cannot_default_generic_parameter_inferrable_from_another_parameter"
+cannot_default_generic_parameter_inferrable_through_same_type = "cannot_default_generic_parameter_inferrable_through_same_type"
+suppress_inferrable_protocol_extension = "suppress_inferrable_protocol_extension"
+EmitGenericRODatas = "EmitGenericRODatas"
+nd = "nd"
+RUNTIME_VERSIONs = "RUNTIME_VERSIONs"
+peform = "peform"
+diagnoseRepresenationError = "diagnoseRepresenationError"
+SouceFile = "SouceFile"
+overridenFiles = "overridenFiles"
+PlatformConditon = "PlatformConditon"
+OverridenDeclsOwner = "OverridenDeclsOwner"
+EnbaleDefaultCMO = "EnbaleDefaultCMO"
+EnbaleCMOEverything = "EnbaleCMOEverything"
+USED_IN_CPP_SOURC = "USED_IN_CPP_SOURC"
+TrimedComment = "TrimedComment"
+usees = "usees"
+SEH = "SEH"
+ForwardScan2nd = "ForwardScan2nd"
+SafeSEH = "SafeSEH"
+primaryNd = "primaryNd"
+IMAGE_DLL_CHARACTERISTICS_NO_SEH = "IMAGE_DLL_CHARACTERISTICS_NO_SEH"
+isConvertableToGuaranteed = "isConvertableToGuaranteed"
+MutipleTopLevelWriters = "MutipleTopLevelWriters"
+getCalleeWithoutImplmentation = "getCalleeWithoutImplmentation"
+isSourceLocInOrignalBuffer = "isSourceLocInOrignalBuffer"
+TBE = "TBE"
+HSI = "HSI"
+overridenVFS = "overridenVFS"
+fpt = "fpt"
+kindNd = "kindNd"
+UncompressibleProperty = "UncompressibleProperty"
+ois = "ois"
+GenericRODatas = "GenericRODatas"
+generic_ro_datas = "generic_ro_datas"
+AllVisibles = "AllVisibles"
+DAA = "DAA"
+gir = "gir"
+BUILTIN_MISC_OPERATIONs = "BUILTIN_MISC_OPERATIONs"
+
+[default.extend-words]
+Frostig = "Frostig"
+Inouts = "Inouts"
+Inout = "Inout"
+SEH = "SEH"
+Sur = "Sur"
+unparseable = "unparseable"
+KindNd = "KindNd"
+WOH = "WOH"
+generic_ro_datas = "generic_ro_datas"
+Bitap = "Bitap"
+hsi = "hsi"
+BUILTIN_MISC_OPERATIONs = "BUILTIN_MISC_OPERATIONs"
+canonicalizations = "canonicalizations"
+rela = "rela"
+RELA = "RELA"

@@ -1,13 +1,13 @@
 // RUN: %batch-code-completion
 
 protocol MyProtocol {
-  associatedtype Mistery
+  associatedtype Mystery
 }
 struct MyStruct {}
 enum MyEnum {}
 class MyClass {}
 struct ConcreteMyProtocol : MyProtocol {
-  typealias Mistery = MyStruct
+  typealias Mystery = MyStruct
 }
 
 // MARK: 'some' keyword.
@@ -129,7 +129,7 @@ class HasTypealias : HasAssocWithConformanceConstraint {
 // OVERRIDE_HasTypealias-DAG: Decl[InstanceMethod]/Super:         func returnAssocWithConformanceConstraint(fn: (Int) -> Int) -> ConcreteMyProtocol {|};
 }
 
-// MARK: Postfix expession for opaque result types.
+// MARK: Postfix expression for opaque result types.
 
 protocol TestProtocol {
   associatedtype Assoc1
